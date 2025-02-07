@@ -9,13 +9,16 @@ interface BlogPostCardProps {
 
 export default function BlogPostCard({ post }: BlogPostCardProps) {
   return (
-    <Card className="h-full transition-all hover:shadow-lg cursor-pointer" onClick={() => window.location.href = `/blog/${post.slug}`}>
+    <Card
+      className="h-full transition-all hover:shadow-lg cursor-pointer"
+      onClick={() => (window.location.href = `/blog/${post.slug}`)}
+    >
       <CardHeader>
         <h3 className="text-xl font-semibold line-clamp-2">{post.title}</h3>
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           <span>{post.authorName}</span>
           <span>•</span>
-          <time>{format(new Date(post.publishedAt), 'MMM d, yyyy')}</time>
+          <time>{format(new Date(post.publishedAt), "MMM d, yyyy")}</time>
         </div>
       </CardHeader>
       <CardContent>

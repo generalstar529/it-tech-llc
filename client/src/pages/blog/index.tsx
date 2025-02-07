@@ -13,7 +13,8 @@ export default function Blog() {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h1 className="text-4xl font-bold mb-4">IT Insights Blog</h1>
           <p className="text-xl text-muted-foreground">
-            Expert insights and analysis on the latest IT trends and technologies
+            Expert insights and analysis on the latest IT trends and
+            technologies
           </p>
         </div>
 

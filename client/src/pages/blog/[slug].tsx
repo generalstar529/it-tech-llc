@@ -46,11 +46,11 @@ export default function BlogPost() {
           <div className="flex items-center gap-2 text-muted-foreground">
             <span>{post.authorName}</span>
             <span>•</span>
-            <time>{format(new Date(post.publishedAt), 'MMMM d, yyyy')}</time>
+            <time>{format(new Date(post.publishedAt), "MMMM d, yyyy")}</time>
           </div>
         </header>
         <div className="prose prose-slate max-w-none">
-          {post.content.split('\n').map((paragraph, i) => (
+          {post.content.split("\n").map((paragraph, i) => (
             <p key={i}>{paragraph}</p>
           ))}
         </div>

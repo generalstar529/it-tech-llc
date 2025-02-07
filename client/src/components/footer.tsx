@@ -23,12 +23,14 @@ export default function Footer() {
                 { href: "#contact", label: "Contact" },
               ].map((link) => (
                 <li key={link.href}>
-                  <a 
+                  <a
                     href={link.href}
                     className="text-sm text-muted-foreground hover:text-primary"
                     onClick={(e) => {
                       e.preventDefault();
-                      document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
+                      document
+                        .querySelector(link.href)
+                        ?.scrollIntoView({ behavior: "smooth" });
                     }}
                   >
                     {link.label}

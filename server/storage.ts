@@ -36,11 +36,13 @@ export class InMemoryStorage implements IStorage {
   }
 
   async getBlogPosts(): Promise<BlogPost[]> {
-    return this.blogPosts.sort((a, b) => b.publishedAt.getTime() - a.publishedAt.getTime());
+    return this.blogPosts.sort(
+      (a, b) => b.publishedAt.getTime() - a.publishedAt.getTime()
+    );
   }
 
   async getBlogPostBySlug(slug: string): Promise<BlogPost | undefined> {
-    return this.blogPosts.find(post => post.slug === slug);
+    return this.blogPosts.find((post) => post.slug === slug);
   }
 
   async createBlogPost(insertBlogPost: InsertBlogPost): Promise<BlogPost> {

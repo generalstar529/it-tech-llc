@@ -26,7 +26,8 @@ const services: (Service & { Icon: any })[] = [
   {
     id: 1,
     title: "IT Consulting",
-    description: "Strategic technology planning and digital transformation services.",
+    description:
+      "Strategic technology planning and digital transformation services.",
     icon: "monitor",
     Icon: MonitorCheck,
   },
@@ -47,21 +48,24 @@ const services: (Service & { Icon: any })[] = [
   {
     id: 4,
     title: "Infrastructure Management",
-    description: "End-to-end infrastructure solutions including setup, maintenance, and optimization.",
+    description:
+      "End-to-end infrastructure solutions including setup, maintenance, and optimization.",
     icon: "database",
     Icon: Database,
   },
   {
     id: 5,
     title: "Network Solutions",
-    description: "Design, implementation, and management of secure and efficient networks.",
+    description:
+      "Design, implementation, and management of secure and efficient networks.",
     icon: "network",
     Icon: Network,
   },
   {
     id: 6,
     title: "Software Development",
-    description: "Custom software solutions tailored to your specific business needs.",
+    description:
+      "Custom software solutions tailored to your specific business needs.",
     icon: "code",
     Icon: Code,
   },
@@ -100,40 +104,46 @@ const stats = [
 const portfolio = [
   {
     title: "Cloud Migration for Enterprise",
-    description: "Successfully migrated a Fortune 500 company's infrastructure to AWS, reducing operational costs by 40%.",
+    description:
+      "Successfully migrated a Fortune 500 company's infrastructure to AWS, reducing operational costs by 40%.",
     icon: Cloud,
-    category: "Cloud Solutions"
+    category: "Cloud Solutions",
   },
   {
     title: "Security Infrastructure Upgrade",
-    description: "Implemented comprehensive cybersecurity measures for a banking network, achieving zero breaches.",
+    description:
+      "Implemented comprehensive cybersecurity measures for a banking network, achieving zero breaches.",
     icon: Shield,
-    category: "Cybersecurity"
+    category: "Cybersecurity",
   },
   {
     title: "Global Network Implementation",
-    description: "Designed and deployed a global network infrastructure for a multinational corporation.",
+    description:
+      "Designed and deployed a global network infrastructure for a multinational corporation.",
     icon: Globe,
-    category: "Network Solutions"
+    category: "Network Solutions",
   },
   {
     title: "Custom ERP Development",
-    description: "Built a tailored ERP solution for a manufacturing company, improving efficiency by 60%.",
+    description:
+      "Built a tailored ERP solution for a manufacturing company, improving efficiency by 60%.",
     icon: Code2,
-    category: "Software Development"
+    category: "Software Development",
   },
   {
     title: "IT Infrastructure Modernization",
-    description: "Modernized legacy systems for a healthcare provider, enhancing performance and security.",
+    description:
+      "Modernized legacy systems for a healthcare provider, enhancing performance and security.",
     icon: Monitor,
-    category: "Infrastructure"
+    category: "Infrastructure",
   },
   {
     title: "Database Optimization Project",
-    description: "Optimized database performance for an e-commerce platform, reducing query times by 80%.",
+    description:
+      "Optimized database performance for an e-commerce platform, reducing query times by 80%.",
     icon: Database,
-    category: "Database Management"
-  }
+    category: "Database Management",
+  },
 ];
 
 export default function Home() {
@@ -147,7 +157,10 @@ export default function Home() {
       <section id="home" className="relative py-20 overflow-hidden">
         {/* Background with modern gradient and pattern */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-background">
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(56,189,248,0.07)_0.89%,transparent_10.12%)] backdrop-blur-[1px]" style={{ backgroundSize: '24px 24px' }}></div>
+          <div
+            className="absolute inset-0 bg-[linear-gradient(90deg,rgba(56,189,248,0.07)_0.89%,transparent_10.12%)] backdrop-blur-[1px]"
+            style={{ backgroundSize: "24px 24px" }}
+          ></div>
         </div>
         <div className="container max-w-7xl mx-auto px-4 relative">
           <div className="max-w-3xl mx-auto text-center">
@@ -155,15 +168,30 @@ export default function Home() {
               Empowering Your Business Through Technology
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              We deliver cutting-edge IT solutions to help your business thrive in
-              the digital age.
+              We deliver cutting-edge IT solutions to help your business thrive
+              in the digital age.
             </p>
             <div className="flex gap-4 justify-center">
-              <Button size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+              <Button
+                size="lg"
+                onClick={() =>
+                  document
+                    .getElementById("contact")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
                 Get Started
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button size="lg" variant="outline" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={() =>
+                  document
+                    .getElementById("services")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
                 Our Services
               </Button>
             </div>
@@ -182,7 +210,11 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {services.map((service) => (
-              <ServiceCard key={service.id} service={service} Icon={service.Icon} />
+              <ServiceCard
+                key={service.id}
+                service={service}
+                Icon={service.Icon}
+              />
             ))}
           </div>
         </div>
@@ -194,7 +226,8 @@ export default function Home() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Our Work</h2>
             <p className="text-xl text-muted-foreground">
-              Delivering exceptional results through innovative technology solutions
+              Delivering exceptional results through innovative technology
+              solutions
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -205,7 +238,9 @@ export default function Home() {
                   <div className="text-sm text-primary font-medium mb-2">
                     {project.category}
                   </div>
-                  <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
+                  <h3 className="text-lg font-semibold mb-2">
+                    {project.title}
+                  </h3>
                   <p className="text-muted-foreground text-sm">
                     {project.description}
                   </p>
@@ -254,7 +289,8 @@ export default function Home() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">IT Insights Blog</h2>
             <p className="text-xl text-muted-foreground">
-              Expert insights and analysis on the latest IT trends and technologies
+              Expert insights and analysis on the latest IT trends and
+              technologies
             </p>
           </div>
           {isLoadingPosts ? (
